@@ -27,5 +27,5 @@ jobs:
           socketcli \
             --target-path $GITHUB_WORKSPACE \
             --scm github \
-            --pr-number $PR_NUMBER
+            --pr-number $PR_NUMBER \
             --reach
