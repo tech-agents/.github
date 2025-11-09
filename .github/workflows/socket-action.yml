@@ -15,7 +15,7 @@ jobs:
 
       - uses: SocketDev/action@v1
         with:
-          mode: firewall-enterprise
+          mode: firewall-free
           socket-token: ${{ secrets.SOCKET_SECURITY_API_KEY }}
 
       # javascript / typescript
