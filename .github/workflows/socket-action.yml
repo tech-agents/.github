@@ -1,0 +1,28 @@
+name: Socket GitHub Action
+
+on:
+  workflow_call:
+    secrets:
+      SOCKET_SECURITY_API_KEY:
+        required: true
+
+jobs:
+  safe-install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: SocketDev/action@v1
+        with:
+          mode: firewall-enterprise
+          socket-token: ${{ secrets.SOCKET_API_KEY }}
+
+      # javascript / typescript
+      - run: sfw npm install # or yarn, pnpm
+
+      # rust
+      # - run: sfw cargo fetch
+
+      # python
+      # - run: sfw pip install -r requirements.txt
