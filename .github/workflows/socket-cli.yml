@@ -28,3 +28,4 @@ jobs:
             --target-path $GITHUB_WORKSPACE \
             --scm github \
             --pr-number $PR_NUMBER
+            --reach
